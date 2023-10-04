@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		250B7ED42ACA5E99009EB950 /* AmberWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7ED32ACA5E99009EB950 /* AmberWidgetApp.swift */; };
-		250B7ED62ACA5E99009EB950 /* AmberWidgetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7ED52ACA5E99009EB950 /* AmberWidgetTabView.swift */; };
+		250B7ED62ACA5E99009EB950 /* AmberWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7ED52ACA5E99009EB950 /* AmberWidgetView.swift */; };
 		250B7ED82ACA5E9A009EB950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250B7ED72ACA5E9A009EB950 /* Assets.xcassets */; };
 		250B7EDB2ACA5E9A009EB950 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250B7EDA2ACA5E9A009EB950 /* Preview Assets.xcassets */; };
 		250B7EE52ACA5E9A009EB950 /* AmberWidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7EE42ACA5E9A009EB950 /* AmberWidgetTests.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		250B7ED02ACA5E99009EB950 /* AmberWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		250B7ED32ACA5E99009EB950 /* AmberWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetApp.swift; sourceTree = "<group>"; };
-		250B7ED52ACA5E99009EB950 /* AmberWidgetTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetTabView.swift; sourceTree = "<group>"; };
+		250B7ED52ACA5E99009EB950 /* AmberWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetView.swift; sourceTree = "<group>"; };
 		250B7ED72ACA5E9A009EB950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250B7EDA2ACA5E9A009EB950 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		250B7EE02ACA5E9A009EB950 /* AmberWidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmberWidgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				250B7ED32ACA5E99009EB950 /* AmberWidgetApp.swift */,
-				250B7ED52ACA5E99009EB950 /* AmberWidgetTabView.swift */,
+				250B7ED52ACA5E99009EB950 /* AmberWidgetView.swift */,
 				250B7ED72ACA5E9A009EB950 /* Assets.xcassets */,
 				250B7ED92ACA5E9A009EB950 /* Preview Content */,
 				250B7EFD2ACAC832009EB950 /* SettingsView.swift */,
@@ -285,7 +285,7 @@
 				250B7F3A2ACBC2A5009EB950 /* KeychainManager.swift in Sources */,
 				250B7F002ACAD12F009EB950 /* HomeView.swift in Sources */,
 				250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */,
-				250B7ED62ACA5E99009EB950 /* AmberWidgetTabView.swift in Sources */,
+				250B7ED62ACA5E99009EB950 /* AmberWidgetView.swift in Sources */,
 				250B7ED42ACA5E99009EB950 /* AmberWidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

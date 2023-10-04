@@ -11,7 +11,7 @@ import SwiftUI
 struct AmberWidgetApp: App {
     var body: some Scene {
         WindowGroup {
-            AmberWidgetTabView()
+            AmberWidgetView()
         }
     }
 }

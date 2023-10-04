@@ -8,6 +8,8 @@ struct HomeView: View {
   
   var onResetApiKey: (() -> Void)?
   
+  // I want automatic darkmode
+  
   var body: some View {
     NavigationView {
       VStack {
@@ -39,6 +41,7 @@ struct HomeView: View {
       .navigationTitle("⚡️ Amber Widget")
       .navigationBarTitleDisplayMode(.large)
     }
+
     .onAppear {
       Task {
         currentPrice = try await AmberApi.getCurrentSitePrice()?.perKwh ?? 0.0

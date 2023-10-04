@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AmberWidgetTabView: View {
+struct AmberWidgetView: View {
   @AppStorage("siteId") var siteId: String = ""
   @State private var apiKey = KeychainManager.getApiKeyFromKeychain() ?? "";
 
@@ -29,6 +29,6 @@ struct AmberWidgetTabView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    AmberWidgetTabView()
+    AmberWidgetView()
   }
 }
