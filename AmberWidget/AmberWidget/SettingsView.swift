@@ -10,11 +10,10 @@ struct SettingsView: View {
   
   @FocusState private var focusedField: FocusedField?
   
-  var onApiKeySaved: (() -> Void)?
+  var onApiKeySaved: ((_ apiKey: String) async -> Void)?
 
   var body: some View {
     NavigationView {
-      
       VStack {
         Text("You need to set your Amber API key")
           .padding()
@@ -36,7 +35,11 @@ struct SettingsView: View {
       .accentColor(Color("brandPrimary"))
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarTrailing) {
-          Button("Save", action: saveApiKey)
+          Button("Save", action: {
+            Task {
+              await saveApiKey()
+            }
+          })
             .disabled(apiKey.isEmpty)
         }
       }
@@ -45,10 +48,10 @@ struct SettingsView: View {
     .navigationBarBackButtonHidden(false)
   }
   
-  func saveApiKey() {
+  func saveApiKey() async {
     if !apiKey.isEmpty {
       KeychainManager.storeCredentialsInKeychain(apiKey: apiKey)
-      self.onApiKeySaved?()
+      await self.onApiKeySaved?(apiKey)
     }
   }
 }

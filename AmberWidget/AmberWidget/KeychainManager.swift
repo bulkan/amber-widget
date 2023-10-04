@@ -2,12 +2,15 @@ import Foundation
 import Security
 
 class KeychainManager {
+  private static let account = "amberApiKey"
+  private static let service = "dev.bulkan.amberApiKey"
+  
   static func storeCredentialsInKeychain(apiKey: String) {
     if let apiKeyData = apiKey.data(using: .utf8) {
       let query: [String: Any] = [
         kSecClass as String: kSecClassGenericPassword,
-        kSecAttrAccount as String: "amberApiKey",
-        kSecAttrService as String: "amber api key",
+        kSecAttrAccount as String: account,
+        kSecAttrService as String: service,
         kSecValueData as String: apiKeyData
       ]
 
@@ -20,18 +23,10 @@ class KeychainManager {
   }
   
   static func getApiKeyFromKeychain() -> String? {
-//    var apiKey: String?
-    
-//    let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
-//                                kSecAttrServer as String: "amberApiKey",
-//                                kSecMatchLimit as String: kSecMatchLimitOne,
-//                                kSecReturnAttributes as String: true,
-//                                kSecReturnData as String: true]
-    
     let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
-      kSecAttrAccount as String: "amberApiKey",
-      kSecAttrService as String: "amber api key",
+      kSecAttrAccount as String: account,
+      kSecAttrService as String: service,
       kSecMatchLimit as String: kSecMatchLimitOne,
       kSecReturnAttributes as String: true,
       kSecReturnData as String: true
@@ -40,11 +35,9 @@ class KeychainManager {
     var item: CFTypeRef?
     let status = SecItemCopyMatching(query as CFDictionary, &item)
     guard status != errSecItemNotFound else {
-//      print("err")
       return ""
     }
     guard status == errSecSuccess else {
-      print("err")
       return ""
     }
     
@@ -53,7 +46,6 @@ class KeychainManager {
       let valueData = existingItem[kSecValueData as String] as? Data,
       let apiKey = String(data: valueData, encoding: .utf8)
       else {
-//        throw KeychainWrapperError(type: .unableToConvertToString)
       return ""
     }
     
@@ -64,8 +56,8 @@ class KeychainManager {
   static func deleteApiKey()  {
     let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
-      kSecAttrAccount as String: "amberApiKey",
-      kSecAttrService as String: "amber api key"
+      kSecAttrAccount as String: account,
+      kSecAttrService as String: service
     ]
     
     let status = SecItemDelete(query as CFDictionary)
