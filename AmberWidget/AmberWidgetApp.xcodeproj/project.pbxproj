@@ -39,14 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		250B7ED02ACA5E99009EB950 /* AmberWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		250B7ED02ACA5E99009EB950 /* AmberWidgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberWidgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		250B7ED32ACA5E99009EB950 /* AmberWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetApp.swift; sourceTree = "<group>"; };
 		250B7ED52ACA5E99009EB950 /* AmberWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetView.swift; sourceTree = "<group>"; };
 		250B7ED72ACA5E9A009EB950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250B7EDA2ACA5E9A009EB950 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		250B7EE02ACA5E9A009EB950 /* AmberWidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmberWidgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		250B7EE02ACA5E9A009EB950 /* AmberWidgetAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmberWidgetAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250B7EE42ACA5E9A009EB950 /* AmberWidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetTests.swift; sourceTree = "<group>"; };
-		250B7EEA2ACA5E9B009EB950 /* AmberWidgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmberWidgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		250B7EEA2ACA5E9B009EB950 /* AmberWidgetAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmberWidgetAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250B7EEE2ACA5E9B009EB950 /* AmberWidgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetUITests.swift; sourceTree = "<group>"; };
 		250B7EF02ACA5E9B009EB950 /* AmberWidgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		250B7EFD2ACAC832009EB950 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		250B7ED12ACA5E99009EB950 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				250B7ED02ACA5E99009EB950 /* AmberWidget.app */,
-				250B7EE02ACA5E9A009EB950 /* AmberWidgetTests.xctest */,
-				250B7EEA2ACA5E9B009EB950 /* AmberWidgetUITests.xctest */,
+				250B7ED02ACA5E99009EB950 /* AmberWidgetApp.app */,
+				250B7EE02ACA5E9A009EB950 /* AmberWidgetAppTests.xctest */,
+				250B7EEA2ACA5E9B009EB950 /* AmberWidgetAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		250B7ECF2ACA5E99009EB950 /* AmberWidget */ = {
+		250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250B7EF42ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidget" */;
+			buildConfigurationList = 250B7EF42ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetApp" */;
 			buildPhases = (
 				250B7ECC2ACA5E99009EB950 /* Sources */,
 				250B7ECD2ACA5E99009EB950 /* Frameworks */,
@@ -166,14 +166,14 @@
 			);
 			dependencies = (
 			);
-			name = AmberWidget;
+			name = AmberWidgetApp;
 			productName = AmberWidget;
-			productReference = 250B7ED02ACA5E99009EB950 /* AmberWidget.app */;
+			productReference = 250B7ED02ACA5E99009EB950 /* AmberWidgetApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		250B7EDF2ACA5E9A009EB950 /* AmberWidgetTests */ = {
+		250B7EDF2ACA5E9A009EB950 /* AmberWidgetAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250B7EF72ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetTests" */;
+			buildConfigurationList = 250B7EF72ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetAppTests" */;
 			buildPhases = (
 				250B7EDC2ACA5E9A009EB950 /* Sources */,
 				250B7EDD2ACA5E9A009EB950 /* Frameworks */,
@@ -184,14 +184,14 @@
 			dependencies = (
 				250B7EE22ACA5E9A009EB950 /* PBXTargetDependency */,
 			);
-			name = AmberWidgetTests;
+			name = AmberWidgetAppTests;
 			productName = AmberWidgetTests;
-			productReference = 250B7EE02ACA5E9A009EB950 /* AmberWidgetTests.xctest */;
+			productReference = 250B7EE02ACA5E9A009EB950 /* AmberWidgetAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		250B7EE92ACA5E9B009EB950 /* AmberWidgetUITests */ = {
+		250B7EE92ACA5E9B009EB950 /* AmberWidgetAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250B7EFA2ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetUITests" */;
+			buildConfigurationList = 250B7EFA2ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetAppUITests" */;
 			buildPhases = (
 				250B7EE62ACA5E9B009EB950 /* Sources */,
 				250B7EE72ACA5E9B009EB950 /* Frameworks */,
@@ -202,9 +202,9 @@
 			dependencies = (
 				250B7EEC2ACA5E9B009EB950 /* PBXTargetDependency */,
 			);
-			name = AmberWidgetUITests;
+			name = AmberWidgetAppUITests;
 			productName = AmberWidgetUITests;
-			productReference = 250B7EEA2ACA5E9B009EB950 /* AmberWidgetUITests.xctest */;
+			productReference = 250B7EEA2ACA5E9B009EB950 /* AmberWidgetAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 250B7ECB2ACA5E99009EB950 /* Build configuration list for PBXProject "AmberWidget" */;
+			buildConfigurationList = 250B7ECB2ACA5E99009EB950 /* Build configuration list for PBXProject "AmberWidgetApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -243,9 +243,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				250B7ECF2ACA5E99009EB950 /* AmberWidget */,
-				250B7EDF2ACA5E9A009EB950 /* AmberWidgetTests */,
-				250B7EE92ACA5E9B009EB950 /* AmberWidgetUITests */,
+				250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */,
+				250B7EDF2ACA5E9A009EB950 /* AmberWidgetAppTests */,
+				250B7EE92ACA5E9B009EB950 /* AmberWidgetAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,12 +312,12 @@
 /* Begin PBXTargetDependency section */
 		250B7EE22ACA5E9A009EB950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 250B7ECF2ACA5E99009EB950 /* AmberWidget */;
+			target = 250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */;
 			targetProxy = 250B7EE12ACA5E9A009EB950 /* PBXContainerItemProxy */;
 		};
 		250B7EEC2ACA5E9B009EB950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 250B7ECF2ACA5E99009EB950 /* AmberWidget */;
+			target = 250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */;
 			targetProxy = 250B7EEB2ACA5E9B009EB950 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -510,7 +510,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmberWidget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AmberWidget";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmberWidgetApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AmberWidgetApp";
 			};
 			name = Debug;
 		};
@@ -529,7 +529,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmberWidget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AmberWidget";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmberWidgetApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AmberWidgetApp";
 			};
 			name = Release;
 		};
@@ -570,7 +570,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		250B7ECB2ACA5E99009EB950 /* Build configuration list for PBXProject "AmberWidget" */ = {
+		250B7ECB2ACA5E99009EB950 /* Build configuration list for PBXProject "AmberWidgetApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250B7EF22ACA5E9B009EB950 /* Debug */,
@@ -579,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250B7EF42ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidget" */ = {
+		250B7EF42ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250B7EF52ACA5E9B009EB950 /* Debug */,
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250B7EF72ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetTests" */ = {
+		250B7EF72ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250B7EF82ACA5E9B009EB950 /* Debug */,
@@ -597,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250B7EFA2ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetUITests" */ = {
+		250B7EFA2ACA5E9B009EB950 /* Build configuration list for PBXNativeTarget "AmberWidgetAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250B7EFB2ACA5E9B009EB950 /* Debug */,
