@@ -19,6 +19,16 @@
 		250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F372ACBC1CA009EB950 /* AmberApi.swift */; };
 		250B7F3A2ACBC2A5009EB950 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F392ACBC2A5009EB950 /* KeychainManager.swift */; };
 		250B7F3D2ACCEC1C009EB950 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250B7F3C2ACCEC1B009EB950 /* Security.framework */; };
+		25F161C62ACDA3A100D44734 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F161C52ACDA3A100D44734 /* WidgetKit.framework */; };
+		25F161C82ACDA3A100D44734 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F161C72ACDA3A100D44734 /* SwiftUI.framework */; };
+		25F161CB2ACDA3A100D44734 /* AmberWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F161CA2ACDA3A100D44734 /* AmberWidgetBundle.swift */; };
+		25F161CD2ACDA3A100D44734 /* AmberWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F161CC2ACDA3A100D44734 /* AmberWidgetLiveActivity.swift */; };
+		25F161CF2ACDA3A100D44734 /* AmberWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F161CE2ACDA3A100D44734 /* AmberWidget.swift */; };
+		25F161D12ACDA3A200D44734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F161D02ACDA3A200D44734 /* Assets.xcassets */; };
+		25F161D52ACDA3A200D44734 /* AmberWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 25F161C42ACDA3A100D44734 /* AmberWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25F161DB2ACDA5D400D44734 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F392ACBC2A5009EB950 /* KeychainManager.swift */; };
+		25F161DC2ACDA5DA00D44734 /* AmberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F372ACBC1CA009EB950 /* AmberApi.swift */; };
+		25F161DD2ACDA88C00D44734 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250B7F3C2ACCEC1B009EB950 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,28 @@
 			remoteGlobalIDString = 250B7ECF2ACA5E99009EB950;
 			remoteInfo = AmberWidget;
 		};
+		25F161D32ACDA3A200D44734 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250B7EC82ACA5E99009EB950 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25F161C32ACDA3A100D44734;
+			remoteInfo = AmberWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		25F161D92ACDA3A200D44734 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				25F161D52ACDA3A200D44734 /* AmberWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		250B7ED02ACA5E99009EB950 /* AmberWidgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberWidgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +85,16 @@
 		250B7F372ACBC1CA009EB950 /* AmberApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberApi.swift; sourceTree = "<group>"; };
 		250B7F392ACBC2A5009EB950 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		250B7F3C2ACCEC1B009EB950 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		25F161C42ACDA3A100D44734 /* AmberWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AmberWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F161C52ACDA3A100D44734 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		25F161C72ACDA3A100D44734 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		25F161CA2ACDA3A100D44734 /* AmberWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetBundle.swift; sourceTree = "<group>"; };
+		25F161CC2ACDA3A100D44734 /* AmberWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		25F161CE2ACDA3A100D44734 /* AmberWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidget.swift; sourceTree = "<group>"; };
+		25F161D02ACDA3A200D44734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25F161D22ACDA3A200D44734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F161DE2ACDA97500D44734 /* AmberWidgetApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AmberWidgetApp.entitlements; path = AmberWidgetApp/AmberWidgetApp.entitlements; sourceTree = "<group>"; };
+		25F161DF2ACDA9BA00D44734 /* AmberWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AmberWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,15 +120,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25F161C12ACDA3A100D44734 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F161C82ACDA3A100D44734 /* SwiftUI.framework in Frameworks */,
+				25F161DD2ACDA88C00D44734 /* Security.framework in Frameworks */,
+				25F161C62ACDA3A100D44734 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		250B7EC72ACA5E99009EB950 = {
 			isa = PBXGroup;
 			children = (
+				25F161DF2ACDA9BA00D44734 /* AmberWidgetExtensionDebug.entitlements */,
+				25F161DE2ACDA97500D44734 /* AmberWidgetApp.entitlements */,
+				25F161DA2ACDA5AC00D44734 /* Api */,
 				250B7ED22ACA5E99009EB950 /* AmberWidget */,
 				250B7EE32ACA5E9A009EB950 /* AmberWidgetTests */,
 				250B7EED2ACA5E9B009EB950 /* AmberWidgetUITests */,
+				25F161C92ACDA3A100D44734 /* AmberWidget */,
 				250B7ED12ACA5E99009EB950 /* Products */,
 				250B7F3B2ACCEB27009EB950 /* Frameworks */,
 			);
@@ -99,6 +154,7 @@
 				250B7ED02ACA5E99009EB950 /* AmberWidgetApp.app */,
 				250B7EE02ACA5E9A009EB950 /* AmberWidgetAppTests.xctest */,
 				250B7EEA2ACA5E9B009EB950 /* AmberWidgetAppUITests.xctest */,
+				25F161C42ACDA3A100D44734 /* AmberWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,8 +168,6 @@
 				250B7ED92ACA5E9A009EB950 /* Preview Content */,
 				250B7EFD2ACAC832009EB950 /* SettingsView.swift */,
 				250B7EFF2ACAD12F009EB950 /* HomeView.swift */,
-				250B7F372ACBC1CA009EB950 /* AmberApi.swift */,
-				250B7F392ACBC2A5009EB950 /* KeychainManager.swift */,
 			);
 			path = AmberWidget;
 			sourceTree = "<group>";
@@ -147,8 +201,31 @@
 			isa = PBXGroup;
 			children = (
 				250B7F3C2ACCEC1B009EB950 /* Security.framework */,
+				25F161C52ACDA3A100D44734 /* WidgetKit.framework */,
+				25F161C72ACDA3A100D44734 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25F161C92ACDA3A100D44734 /* AmberWidget */ = {
+			isa = PBXGroup;
+			children = (
+				25F161CA2ACDA3A100D44734 /* AmberWidgetBundle.swift */,
+				25F161CC2ACDA3A100D44734 /* AmberWidgetLiveActivity.swift */,
+				25F161CE2ACDA3A100D44734 /* AmberWidget.swift */,
+				25F161D02ACDA3A200D44734 /* Assets.xcassets */,
+				25F161D22ACDA3A200D44734 /* Info.plist */,
+			);
+			path = AmberWidget;
+			sourceTree = "<group>";
+		};
+		25F161DA2ACDA5AC00D44734 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				250B7F392ACBC2A5009EB950 /* KeychainManager.swift */,
+				250B7F372ACBC1CA009EB950 /* AmberApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +238,12 @@
 				250B7ECC2ACA5E99009EB950 /* Sources */,
 				250B7ECD2ACA5E99009EB950 /* Frameworks */,
 				250B7ECE2ACA5E99009EB950 /* Resources */,
+				25F161D92ACDA3A200D44734 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				25F161D42ACDA3A200D44734 /* PBXTargetDependency */,
 			);
 			name = AmberWidgetApp;
 			productName = AmberWidget;
@@ -207,6 +286,23 @@
 			productReference = 250B7EEA2ACA5E9B009EB950 /* AmberWidgetAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		25F161C32ACDA3A100D44734 /* AmberWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F161D62ACDA3A200D44734 /* Build configuration list for PBXNativeTarget "AmberWidgetExtension" */;
+			buildPhases = (
+				25F161C02ACDA3A100D44734 /* Sources */,
+				25F161C12ACDA3A100D44734 /* Frameworks */,
+				25F161C22ACDA3A100D44734 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AmberWidgetExtension;
+			productName = AmberWidgetExtension;
+			productReference = 25F161C42ACDA3A100D44734 /* AmberWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					250B7ECF2ACA5E99009EB950 = {
@@ -227,6 +323,9 @@
 					250B7EE92ACA5E9B009EB950 = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 250B7ECF2ACA5E99009EB950;
+					};
+					25F161C32ACDA3A100D44734 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
@@ -246,6 +345,7 @@
 				250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */,
 				250B7EDF2ACA5E9A009EB950 /* AmberWidgetAppTests */,
 				250B7EE92ACA5E9B009EB950 /* AmberWidgetAppUITests */,
+				25F161C32ACDA3A100D44734 /* AmberWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +371,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25F161C22ACDA3A100D44734 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F161D12ACDA3A200D44734 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +415,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25F161C02ACDA3A100D44734 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F161CD2ACDA3A100D44734 /* AmberWidgetLiveActivity.swift in Sources */,
+				25F161CF2ACDA3A100D44734 /* AmberWidget.swift in Sources */,
+				25F161DC2ACDA5DA00D44734 /* AmberApi.swift in Sources */,
+				25F161CB2ACDA3A100D44734 /* AmberWidgetBundle.swift in Sources */,
+				25F161DB2ACDA5D400D44734 /* KeychainManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -319,6 +439,11 @@
 			isa = PBXTargetDependency;
 			target = 250B7ECF2ACA5E99009EB950 /* AmberWidgetApp */;
 			targetProxy = 250B7EEB2ACA5E9B009EB950 /* PBXContainerItemProxy */;
+		};
+		25F161D42ACDA3A200D44734 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25F161C32ACDA3A100D44734 /* AmberWidgetExtension */;
+			targetProxy = 25F161D32ACDA3A200D44734 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -440,11 +565,14 @@
 		250B7EF52ACA5E9B009EB950 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AmberWidgetApp/AmberWidgetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AmberWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = V755W6PEA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -469,11 +597,14 @@
 		250B7EF62ACA5E9B009EB950 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AmberWidgetApp/AmberWidgetApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AmberWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = V755W6PEA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -567,6 +698,72 @@
 			};
 			name = Release;
 		};
+		25F161D72ACDA3A200D44734 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AmberWidgetExtensionDebug.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V755W6PEA9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AmberWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AmberWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.bulkan.AmberWidget.AmberWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25F161D82ACDA3A200D44734 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V755W6PEA9;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AmberWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AmberWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.bulkan.AmberWidget.AmberWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,6 +799,15 @@
 			buildConfigurations = (
 				250B7EFB2ACA5E9B009EB950 /* Debug */,
 				250B7EFC2ACA5E9B009EB950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25F161D62ACDA3A200D44734 /* Build configuration list for PBXNativeTarget "AmberWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F161D72ACDA3A200D44734 /* Debug */,
+				25F161D82ACDA3A200D44734 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
