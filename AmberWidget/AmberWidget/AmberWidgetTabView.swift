@@ -1,20 +1,29 @@
 import SwiftUI
 
 struct AmberWidgetTabView: View {
+  @State private var apiKey = KeychainManager.getApiKeyFromKeychain() ?? "";
+  
+  @ViewBuilder
   var body: some View {
-    TabView {
-      HomeView()
-        .tabItem {
-          Image(systemName: "house")
-          Text("Home")
-        }
-      SettingsView()
-        .tabItem {
-          Image(systemName: "gear")
-          Text("Settings")
-        }
+    VStack {
+      if apiKey.isEmpty {
+        SettingsView(onApiKeySaved: self.onApiKeySaved)
+      } else {
+        HomeView(onResetApiKey: self.onResetApiKey)
+      }
     }
-    .accentColor(Color("brandPrimary"))
+    .onAppear {
+      KeychainManager.deleteApiKey()
+    }
+  }
+    
+  func onResetApiKey() {
+    KeychainManager.deleteApiKey()
+    self.apiKey = ""
+  }
+  
+  func onApiKeySaved() {
+    self.apiKey = KeychainManager.getApiKeyFromKeychain() ?? ""
   }
 }
 

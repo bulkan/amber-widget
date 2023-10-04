@@ -1,20 +1,21 @@
-//
-//  HomeView.swift
-//  AmberWidget
-//
-//  Created by Bulkan Evcimen on 2/10/2023.
-//
-
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-        Text("Home view")
+  @State private var apiKey = KeychainManager.getApiKeyFromKeychain() ?? "";
+  var onResetApiKey: (() -> Void)?
+  
+  var body: some View {
+    NavigationView {
+      Button("Reset API key \(apiKey)") {
+        self.onResetApiKey?()
+      }
+      .navigationTitle("🏠 Home")
     }
+  }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+      HomeView()
     }
 }

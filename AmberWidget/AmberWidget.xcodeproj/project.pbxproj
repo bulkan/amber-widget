@@ -16,6 +16,9 @@
 		250B7EF12ACA5E9B009EB950 /* AmberWidgetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7EF02ACA5E9B009EB950 /* AmberWidgetUITestsLaunchTests.swift */; };
 		250B7EFE2ACAC832009EB950 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7EFD2ACAC832009EB950 /* SettingsView.swift */; };
 		250B7F002ACAD12F009EB950 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7EFF2ACAD12F009EB950 /* HomeView.swift */; };
+		250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F372ACBC1CA009EB950 /* AmberApi.swift */; };
+		250B7F3A2ACBC2A5009EB950 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F392ACBC2A5009EB950 /* KeychainManager.swift */; };
+		250B7F3D2ACCEC1C009EB950 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250B7F3C2ACCEC1B009EB950 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		250B7EF02ACA5E9B009EB950 /* AmberWidgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberWidgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		250B7EFD2ACAC832009EB950 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		250B7EFF2ACAD12F009EB950 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		250B7F372ACBC1CA009EB950 /* AmberApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberApi.swift; sourceTree = "<group>"; };
+		250B7F392ACBC2A5009EB950 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		250B7F3C2ACCEC1B009EB950 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250B7F3D2ACCEC1C009EB950 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,7 @@
 				250B7EE32ACA5E9A009EB950 /* AmberWidgetTests */,
 				250B7EED2ACA5E9B009EB950 /* AmberWidgetUITests */,
 				250B7ED12ACA5E99009EB950 /* Products */,
+				250B7F3B2ACCEB27009EB950 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +112,8 @@
 				250B7ED92ACA5E9A009EB950 /* Preview Content */,
 				250B7EFD2ACAC832009EB950 /* SettingsView.swift */,
 				250B7EFF2ACAD12F009EB950 /* HomeView.swift */,
+				250B7F372ACBC1CA009EB950 /* AmberApi.swift */,
+				250B7F392ACBC2A5009EB950 /* KeychainManager.swift */,
 			);
 			path = AmberWidget;
 			sourceTree = "<group>";
@@ -131,6 +141,14 @@
 				250B7EF02ACA5E9B009EB950 /* AmberWidgetUITestsLaunchTests.swift */,
 			);
 			path = AmberWidgetUITests;
+			sourceTree = "<group>";
+		};
+		250B7F3B2ACCEB27009EB950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				250B7F3C2ACCEC1B009EB950 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				250B7EFE2ACAC832009EB950 /* SettingsView.swift in Sources */,
+				250B7F3A2ACBC2A5009EB950 /* KeychainManager.swift in Sources */,
 				250B7F002ACAD12F009EB950 /* HomeView.swift in Sources */,
+				250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */,
 				250B7ED62ACA5E99009EB950 /* AmberWidgetTabView.swift in Sources */,
 				250B7ED42ACA5E99009EB950 /* AmberWidgetApp.swift in Sources */,
 			);
@@ -427,11 +447,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AmberWidget/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,11 +476,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AmberWidget/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
