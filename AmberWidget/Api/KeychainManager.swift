@@ -4,14 +4,19 @@ import Security
 class KeychainManager {
   private static let account = "amberApiKey"
   private static let service = "dev.bulkan.amberApiKey"
+  private static let accessGroup = "com.bulkan.dev.amber-widget-keychain"
   
   static func storeCredentialsInKeychain(apiKey: String) {
+    
+
+    
     if let apiKeyData = apiKey.data(using: .utf8) {
       let query: [String: Any] = [
         kSecClass as String: kSecClassGenericPassword,
         kSecAttrAccount as String: account,
         kSecAttrService as String: service,
-        kSecValueData as String: apiKeyData
+        kSecValueData as String: apiKeyData,
+//        kSecAttrAccessGroup as String: accessGroup
       ]
 
       let status = SecItemAdd(query as CFDictionary, nil)
@@ -29,7 +34,8 @@ class KeychainManager {
       kSecAttrService as String: service,
       kSecMatchLimit as String: kSecMatchLimitOne,
       kSecReturnAttributes as String: true,
-      kSecReturnData as String: true
+      kSecReturnData as String: true,
+//      kSecAttrAccessGroup as String: accessGroup
     ]
     
     var item: CFTypeRef?
@@ -57,7 +63,8 @@ class KeychainManager {
     let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
       kSecAttrAccount as String: account,
-      kSecAttrService as String: service
+      kSecAttrService as String: service,
+//      kSecAttrAccessGroup as String: accessGroup
     ]
     
     let status = SecItemDelete(query as CFDictionary)

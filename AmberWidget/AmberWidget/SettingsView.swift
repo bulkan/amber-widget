@@ -10,7 +10,9 @@ struct SettingsView: View {
   
   @FocusState private var focusedField: FocusedField?
   
-  var onApiKeySaved: ((_ apiKey: String) async -> Void)?
+  let data = DataService()
+  
+//  var onApiKeySaved: ((_ apiKey: String) async -> Void)?
 
   var body: some View {
     NavigationView {
@@ -35,11 +37,7 @@ struct SettingsView: View {
       .accentColor(Color("brandPrimary"))
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarTrailing) {
-          Button("Save", action: {
-            Task {
-              await saveApiKey()
-            }
-          })
+          Button("Save", action: self.saveApiKey)
             .disabled(apiKey.isEmpty)
         }
       }
@@ -48,10 +46,9 @@ struct SettingsView: View {
     .navigationBarBackButtonHidden(false)
   }
   
-  func saveApiKey() async {
+  func saveApiKey() {
     if !apiKey.isEmpty {
-      KeychainManager.storeCredentialsInKeychain(apiKey: apiKey)
-      await self.onApiKeySaved?(apiKey)
+      data.updateApiKey(apiKey: apiKey)
     }
   }
 }

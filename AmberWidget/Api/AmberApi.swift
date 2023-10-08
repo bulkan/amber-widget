@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 enum Status: Codable {
   case pending, active, closed
@@ -43,19 +44,16 @@ enum AmberApiError: Error {
   case invalidUrl
   
   case invalidData
-  
-  // Throw in all other cases
-  case unexpected(code: Int)
-  
   case noSiteId
 }
 
-
 class AmberApi {
-  static private var endPoint = "https://api.amber.com.au/v1"
+  private var endPoint = "https://api.amber.com.au/v1"
+  
+  @AppStorage("apiKey", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var apiKey = ""
+  @AppStorage("siteId", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var siteId = ""
 
-  static func getSites() async throws -> Site? {
-    let apiKey = KeychainManager.getApiKeyFromKeychain() ?? ""
+  func getSites() async throws -> Site? {
     if apiKey.isEmpty {
       throw AmberApiError.noApiKey
     }
@@ -77,18 +75,14 @@ class AmberApi {
     }
   }
   
-  static func getCurrentSitePrice() async throws -> CurrentInterval? {
-    let apiKey = KeychainManager.getApiKeyFromKeychain() ?? ""
+  func getCurrentSitePrice() async throws -> CurrentInterval? {
     if apiKey.isEmpty {
       throw AmberApiError.noApiKey
     }
     
-    guard var siteId = UserDefaults.standard.string(forKey: "siteId") else { throw AmberApiError.invalidUrl }
-    
     if (siteId.isEmpty) {
-      let site = try await AmberApi.getSites()
+      let site = try await self.getSites()
       siteId = site?.id ?? ""
-      UserDefaults.standard.set(siteId, forKey: "siteId")
     }
     
     guard let url = URL(string: "\(endPoint)/sites/\(siteId)/prices/current?resolution=30") else { throw AmberApiError.invalidUrl }

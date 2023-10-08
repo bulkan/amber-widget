@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct HomeView: View {
-  @AppStorage("siteId") var siteId: String = ""
+  @AppStorage("siteId", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var siteId: String = ""
   
   @State private var currentPrice: Float = 0;
   @State private var isCurrentPriceLoading = true
   
   var onResetApiKey: (() -> Void)?
   
-  // I want automatic darkmode
+  let amberApi = AmberApi()
   
   var body: some View {
     NavigationView {
@@ -44,7 +44,7 @@ struct HomeView: View {
 
     .onAppear {
       Task {
-        currentPrice = try await AmberApi.getCurrentSitePrice()?.perKwh ?? 0.0
+        currentPrice = try await amberApi.getCurrentSitePrice()?.perKwh ?? 0.0
         isCurrentPriceLoading = false
       }
     }

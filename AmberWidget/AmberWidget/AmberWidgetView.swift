@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct AmberWidgetView: View {
-  @AppStorage("siteId") var siteId: String = ""
-  @State private var apiKey = KeychainManager.getApiKeyFromKeychain() ?? "";
-
+  @AppStorage("siteId", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var siteId: String = ""
+  @AppStorage("apiKey", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var apiKey = ""
+  
   @ViewBuilder
   var body: some View {
     VStack {
       if apiKey.isEmpty {
-        SettingsView(onApiKeySaved: self.onApiKeySaved)
+        SettingsView()
       } else {
         HomeView(onResetApiKey: self.onResetApiKey)
       }
@@ -16,14 +16,16 @@ struct AmberWidgetView: View {
   }
   
   func onResetApiKey() {
-    KeychainManager.deleteApiKey()
-    UserDefaults.standard.removeObject(forKey: "siteId")
+//    KeychainManager.deleteApiKey()
+//    let store = UserDefaults(suiteName: "group.dev.bulkan.api")
+//    store?.removeObject(forKey: "siteId")
+//    store?.removeObject(forKey: "apiKey")
     apiKey = ""
     siteId = ""
   }
   
   func onApiKeySaved(newApiKey: String) async {
-    apiKey = newApiKey
+//    UserDefaults(suiteName: "group.dev.bulkan.api")?.set(apiKey, forKey: "apiKey")
   }
 }
 

@@ -2,50 +2,56 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-  func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(date: Date(), emoji: "😀")
+  let amberApi = AmberApi()
+  
+  func placeholder(in context: Context) -> AmberWidgetEntry {
+    AmberWidgetEntry(date: Date(), currentPrice: 22.13)
   }
   
-  func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-    let entry = SimpleEntry(date: Date(), emoji: "😀")
+  func getSnapshot(in context: Context, completion: @escaping (AmberWidgetEntry) -> ()) {
+    let entry = AmberWidgetEntry(date: Date(), currentPrice: 22.12)
     completion(entry)
   }
   
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    var entries: [SimpleEntry] = []
-    
-    // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-    let currentDate = Date()
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = SimpleEntry(date: entryDate, emoji: "😀")
-      entries.append(entry)
+    Task {
+      let currentDate = Date()
+      let currentPrice = try await amberApi.getCurrentSitePrice()?.perKwh ?? 0.0
+      let entry = AmberWidgetEntry(date: currentDate, currentPrice: currentPrice)
+      let entries: [AmberWidgetEntry] = [entry]
+      
+      let reloadDate = Calendar.current.date(byAdding: .minute,
+                                              value: 5,
+                                              to: currentDate)!
+      let timeline = Timeline(entries: entries, policy: .after(reloadDate))
+      completion(timeline)
     }
-    
-    let timeline = Timeline(entries: entries, policy: .atEnd)
-    completion(timeline)
   }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct AmberWidgetEntry: TimelineEntry {
   let date: Date
-  let emoji: String
+  let currentPrice: Float
 }
 
 struct AmberWidgetEntryView : View {
-  @State private var currentPrice:Float = 0.0;
   var entry: Provider.Entry
+  
+  @AppStorage("apiKey", store: UserDefaults(suiteName: "group.dev.bulkan.api")) private var apiKey: String = ""
   
   var body: some View {
     VStack {
-      Text("\(currentPrice, specifier: "%.0f")c/kWh")
-        .fontWeight(.heavy)
-        .font(.system(size: 36))
-    }
-    .onAppear {
-      Task {
-        currentPrice = try await AmberApi.getCurrentSitePrice()?.perKwh ?? 0.0
-        //            isCurrentPsriceLoading = false
+      
+      if apiKey.isEmpty {
+        Text("Please configure api key in app")
+      } else {
+        Text("\(entry.currentPrice, specifier: "%.0f")c/kWh")
+          .fontWeight(.heavy)
+          .font(.system(size: 25))
+          .foregroundStyle(.white)
+        
+        Text("\(entry.date)")
+          .font(.system(size: 12))
       }
     }
   }
@@ -58,21 +64,22 @@ struct AmberWidget: Widget {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
       if #available(iOS 17.0, *) {
         AmberWidgetEntryView(entry: entry)
-          .containerBackground(.fill.tertiary, for: .widget)
+          .containerBackground(Color("brandPrimary"), for: .widget)
       } else {
         AmberWidgetEntryView(entry: entry)
           .padding()
-          .background()
+          .background(Color("brandPrimary"))
       }
     }
-    .configurationDisplayName("My Widget")
-    .description("This is an example widget.")
+//    .supportedFamilies([.systemSmall])
+    .configurationDisplayName("Amber Widget")
+    .description("Displays current electricy price")
   }
 }
 
 #Preview(as: .systemSmall) {
   AmberWidget()
 } timeline: {
-  SimpleEntry(date: .now, emoji: "😀")
-  SimpleEntry(date: .now, emoji: "🤩")
+  AmberWidgetEntry(date: .now, currentPrice: 20.1)
 }
+

@@ -19,6 +19,8 @@
 		250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F372ACBC1CA009EB950 /* AmberApi.swift */; };
 		250B7F3A2ACBC2A5009EB950 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250B7F392ACBC2A5009EB950 /* KeychainManager.swift */; };
 		250B7F3D2ACCEC1C009EB950 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250B7F3C2ACCEC1B009EB950 /* Security.framework */; };
+		255CB2E72AD0075100551959 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CB2E62AD0075100551959 /* DataService.swift */; };
+		255CB2E82AD0075100551959 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255CB2E62AD0075100551959 /* DataService.swift */; };
 		25F161C62ACDA3A100D44734 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F161C52ACDA3A100D44734 /* WidgetKit.framework */; };
 		25F161C82ACDA3A100D44734 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F161C72ACDA3A100D44734 /* SwiftUI.framework */; };
 		25F161CB2ACDA3A100D44734 /* AmberWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F161CA2ACDA3A100D44734 /* AmberWidgetBundle.swift */; };
@@ -84,6 +86,7 @@
 		250B7F372ACBC1CA009EB950 /* AmberApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmberApi.swift; sourceTree = "<group>"; };
 		250B7F392ACBC2A5009EB950 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		250B7F3C2ACCEC1B009EB950 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		255CB2E62AD0075100551959 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		25F161C42ACDA3A100D44734 /* AmberWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AmberWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F161C52ACDA3A100D44734 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		25F161C72ACDA3A100D44734 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,7 @@
 			children = (
 				250B7F392ACBC2A5009EB950 /* KeychainManager.swift */,
 				250B7F372ACBC1CA009EB950 /* AmberApi.swift */,
+				255CB2E62AD0075100551959 /* DataService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -391,6 +395,7 @@
 				250B7F002ACAD12F009EB950 /* HomeView.swift in Sources */,
 				250B7F382ACBC1CA009EB950 /* AmberApi.swift in Sources */,
 				250B7ED62ACA5E99009EB950 /* AmberWidgetView.swift in Sources */,
+				255CB2E72AD0075100551959 /* DataService.swift in Sources */,
 				250B7ED42ACA5E99009EB950 /* AmberWidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +423,7 @@
 			files = (
 				25F161CF2ACDA3A100D44734 /* AmberWidget.swift in Sources */,
 				25F161DC2ACDA5DA00D44734 /* AmberApi.swift in Sources */,
+				255CB2E82AD0075100551959 /* DataService.swift in Sources */,
 				25F161CB2ACDA3A100D44734 /* AmberWidgetBundle.swift in Sources */,
 				25F161DB2ACDA5D400D44734 /* KeychainManager.swift in Sources */,
 			);
